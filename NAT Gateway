@@ -1,0 +1,19 @@
+resource "aws_eip" "nat_gw_eip" {
+  domain   = "vpc"
+
+  tags = {
+    Name = "july_24_vpc-natgw-eip"
+  }
+}
+
+
+resource "aws_nat_gateway" "july_24_vpc_natgw" {
+  allocation_id = aws_eip.nat_gw_eip.id
+  subnet_id     = aws_subnet.public_subnet_1.id
+
+  tags = {
+    Name = "july_24_vpc-natgw"
+  }
+
+  depends_on = [aws_internet_gateway.july_24_vpc_igw]
+}
