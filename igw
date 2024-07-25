@@ -1,0 +1,7 @@
+resource "aws_internet_gateway" "july_24_vpc_igw" {
+  vpc_id = aws_vpc.july_24_vpc.id
+
+  tags = {
+    Name = "july_24_vpc-igw"
+  }
+}
