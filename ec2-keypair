@@ -1,0 +1,4 @@
+resource "aws_key_pair" "july_24_vpc_key" {
+  key_name   = "july_24_vpc-key"
+  public_key = "ssh-rsa AAB3NzaC1ycABgQDv76bR7J8gDr0Cf+M1fOjhUwg8hw//FZv6tC3hz3JOgQpUuR2NzipikvbSWRC3obw7RE2iPNcU2OJMR0BkfgL8aD+4ZHBO29GK43H3o6HPLnTk46Wyuk= ubuntu@ip-172-31-39-89"
+}
