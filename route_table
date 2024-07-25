@@ -1,0 +1,14 @@
+
+resource "aws_route_table" "public_route_table" {
+  vpc_id = aws_vpc.july_24_vpc.id
+  tags = {
+    Name = "july_24_vpc-public-rtb"
+  }
+}
+ 
+resource "aws_route_table" "private_route_table" {
+  vpc_id = aws_vpc.july_24_vpc.id
+  tags = {
+    Name = "july_24_vpc-private-rtb"
+  }
+}
