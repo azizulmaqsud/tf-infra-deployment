@@ -24,7 +24,7 @@ resource "kubernetes_deployment_v1" "frontend" {
 
       spec {
         container {
-          image = "azizul2go/two-tier-frontend-image:v2"
+          image = "azizul2go/two-tier-backend-image:v1"
           name  = "frontend"
         }
       }
